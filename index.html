@@ -1,0 +1,473 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+  <title>Crafting simulator</title>
+  <link rel="stylesheet" href="./jquery-ui.css">
+  <link rel="stylesheet" href="./inventory.css">
+  <style>
+    #project-label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 1em;
+    }
+    #project-icon {
+      float: left;
+      height: 32px;
+      width: 32px;
+    }
+    #project-description {
+      margin: 0;
+      padding: 0;
+    }
+
+    img {
+      /*width: 3.7%;*/
+      width: 65.922px;
+      border: 3px solid #b9d1eb;
+      height: 65.922px;
+      border-radius: 12%;
+      margin-right: 7.09px;
+      margin-bottom: 5px;
+      cursor: pointer;
+    }
+
+    .pick-one {
+      height: 530px;
+      width: 457.938px;
+      border: 1px solid;
+      position: absolute;
+      left: 49%;
+      /*padding: 3.78% 1.2%;*/
+      /*padding-right: 3%;*/
+      padding-bottom:
+      70.0781px
+      ;
+      padding-left:
+      22.2344px
+      ;
+      padding-right:
+      55.6094px
+      ;
+      padding-top:
+      70.0781px
+      ;
+      /* overflow-y: hidden; */
+      top: 9%;
+      background: url(images/container.png);
+    }
+
+    .prompt {
+      border: 1px solid;
+      width: 303px;
+      height: 426px;
+      background: url(images/template3.jpg);
+      position: absolute;
+      left: 35%;
+      top: 16%;
+      z-index: 10;
+    }
+
+    .scrollable {
+      height: 112%;
+      overflow-y: auto;
+    }
+
+    .scrollable::-webkit-scrollbar {
+      display:none;
+    }
+
+    #exchange {
+      position: relative;
+      top: 93px;
+      left: 175px;
+      font-size: 20px;
+      font-weight: 200;
+    }
+
+    #project {
+      top: 8px;
+      left: 103px;
+      position: relative;
+      font-size: 20px;
+      font-weight: 200;
+    }
+
+    #qty {
+      position: relative;
+      top: 283px;
+      left: 183px;
+      width: 56px;
+      border: none;
+    }
+
+    #add {
+      position: relative;
+      top: 335px;
+      left: 29px;
+      width: 124px;
+      height: 45px;
+      background: orange;
+      border-radius: 7px;
+      box-shadow: none;
+      border: none;
+      -webkit-text-fill-color: white;
+      -webkit-text-stroke-width: 0.3px;
+      -webkit-text-stroke-color: #ffa42c;
+      font-size: 19px;
+      background-image: url('./images/template3.jpg');
+      background-position: -88px -358px;
+    }
+
+    #icon {
+      position: relative;
+      top: -22px;
+      left: 121px
+    }
+
+    .hide {
+      display: none;
+    }
+
+    .event-log-container {
+      width: 842px;
+      height: 533px;
+      background-image: url('./images/template.jpg');
+    }
+
+    #event-logs {
+      top: 20.2%;
+      list-style-type: none;
+      position: relative;
+      padding-left: 12px;
+      padding-right: 15px;
+      height: 69%;
+      overflow-y: scroll;
+    }
+
+    #event-logs::-webkit-scrollbar {
+      display:none;
+    }
+
+    #event-logs li {
+      border-radius: 11px;
+      border: 1.4px solid #eeedf2;
+      padding: 10px;
+      margin-bottom: 2px;
+      font-size: 14px;
+      padding-left: 23px;
+      background: white;
+    }
+
+    #event-logs li p {
+      display: inline;
+      font-size: 13px;
+      color: grey;
+      vertical-align: text-bottom;
+    }
+
+    .tiny {
+      width: 22px;
+      height: auto;
+      border: none;
+      margin: unset;
+      vertical-align: middle;
+    }
+
+    .context {
+      display: none;
+      position: relative;
+      width: 0px;
+      height: 0px;
+    }
+
+    .context p {
+      border: 1px solid white;
+      position: absolute;
+      top: -31px;
+      left: 29px;
+      color: white;
+      background: black;
+      opacity: 0.7;
+      padding: 3px 11px;
+    }
+
+    img:hover + .context {
+      display: block;
+    }
+
+    .floater {
+      float: left;
+    }
+
+  </style>
+  <script src="./node_modules/javascript-lp-solver/src/solver.js"></script>
+  <script src="./jquery.min.js"></script>
+  <script src="./jquery-ui.js"></script>
+</head>
+<body>
+
+  <div id="project-label">Click an item there  :</div>
+  <button id="load-events">load recent events</button>
+  <button id="load-events-1">load events [1]</button>
+  <button id="load-events-2">load events [2]</button>
+  <button id="save-events-1">save events [1]</button>
+  <button id="save-events-2">save events [2]</button>
+  <button id="clear-events">clear events</button>
+  <button id="toggle-mode">toggle mode</button>
+  <div class="prompt hide">
+   <form id="submit-it">
+    <div id="project">lorem ipsum</div>
+    <input id="qty" type="number">
+    <input id="add" type="submit" value="Add" >
+    <p id="project-description"></p>
+    <img id="icon" />
+    <p id="exchange">null</p>
+  </form>
+</div>
+
+<div class="event-log-container">
+  <ul id="event-logs">
+  </ul>
+</div>
+
+<ul id="results">
+</ul>
+<div class="pick-one">
+  <div class="scrollable">
+  </div>
+</div>
+<script src="./price.js"></script>
+<script src="./process.js"></script>
+<script src="./sort.js"></script>
+<script>
+  var formatter = new Intl.NumberFormat('en-US', {
+    minimumFractionDigits: 0,
+  });
+
+  var errors = [];
+  // Generate items
+  for (var i = 0; i < items.length; i++)
+    $('.scrollable').append('<div class="floater"><img src="images/' + items[i] + '.png"  onerror="errors.push(this.alt); this.src=\'images/alternative.png\';" alt="' + items[i] + '"/><div class="context"><p>'+items[i]+'\nprice: '+formatter.format(prices[items[i]]['price'])+'\n snapping: '+prices[items[i]]['snapping']+'</p></div></div>');
+</script>
+<script>
+
+  // Do actions if items are clicked
+  var inventory = {};
+  var events = [];
+
+  $(document).on('click', 'img', function(){
+    $('.prompt').removeClass('hide');
+    var src = $(this).attr('src');
+    var alt = $(this).attr('alt');
+
+    console.log(alt);
+
+    $('#icon').attr('src', src);
+    $('#project').text(alt);
+    $('#exchange').text(formatter.format(prices[alt]['price']));
+    $('#qty').val('').focus();
+  });
+
+  $(document).on('click', '#clear-events', function(){
+    events = [];
+    localStorage.setItem('events', JSON.stringify(events));
+  });
+
+  var getCraftingCost = function(product)
+  {
+      if(recipes[product]['cost'] != undefined) {
+          return recipes[product]['cost'];
+      }
+
+      return 0;
+  }
+
+  function loadEvents(name) {
+    events = JSON.parse(localStorage.getItem(name));
+
+    for (var i = 0; i < events.length; i++) {
+      window[events[i].type](...events[i].data);
+    }
+  }
+
+  $(document).on('click', '#toggle-mode', function(){
+    zeny_mode = !zeny_mode;
+    loadResult();
+  });
+
+  $(document).on('click', '#load-events', function(){
+    loadEvents('events');
+  });
+
+  $(document).on('click', '#load-events-1', function(){
+    loadEvents('events-1');
+  });
+
+  $(document).on('click', '#load-events-2', function(){
+    loadEvents('events-2');
+  });
+
+  $(document).on('click', '#save-events-1', function(){
+    saveEvents('events-1');
+  });
+
+  $(document).on('click', '#save-events-2', function(){
+    saveEvents('events-2');
+  });
+
+  function saveEvents(name) {
+    localStorage.setItem(name, JSON.stringify(events));
+  }
+
+  function saveEvent(type, data) {
+    events.push({type, data});
+
+    localStorage.setItem('events', JSON.stringify(events));
+  }
+
+  function addedItem(index, qty, src) {
+      $('#event-logs').prepend('<li><p>1 min(s) ago</p>   Added '+qty+' <img class="tiny" src="'+src+'"/> '+index+'</li>');
+      inventory[index] = qty;
+
+      loadResult();
+  }
+
+  function loadResult()
+  {
+    var result = processIt();
+      $('#results').html('');
+
+      var sortable = [];
+      var unused = {};
+
+      for(var v in inventory)
+        unused[v] = 1;
+
+      for (var i in result) {
+          var craft_qty = result[i];
+          var craft_profit = (prices[i]['price'] - getCraftingCost(i))*craft_qty;
+          var craft_name = i;
+          var mat_cost = 0;
+          var snapping = prices[i]['snapping'];
+
+          if(zeny_mode == true) {
+
+            var product = i;
+            // craft simulator
+            var a = new craftSimulator(Object.assign({}, inventory));
+            var result = a.craft(product);
+
+            while(result == true) {
+              result = a.craft(product);
+            }
+
+            craft_qty = a.qty;
+            mat_cost = a.totalCost;
+            craft_profit = a.getTotalProfit(); // 749,000
+          }
+
+          if(zeny_mode == true) {
+            sortable.push([i, craft_qty, craft_profit, JSON.stringify(a.breakdown), snapping]);
+
+            for(var v in recipes[i])
+              unused[v] = 0;
+
+          } else {
+
+            craft_profit = formatter.format(craft_profit);
+            mat_cost = formatter.format(mat_cost);
+
+             $('#results').append(
+              '<li>'+i + '<img src="images/'+i+'.png"  alt="'+i+'"/>' +' x '+ craft_qty +' can be crafted. \n will sold for '+ craft_profit +'\n total materials cost: ' + mat_cost + '\n snapping: '+ snapping +' <div class="context"><p>'+JSON.stringify(recipes[i])+'</p></div><button class="craft" name="'+ i +'" qty="'+ craft_qty +'">Craft</button></li>');
+          }
+      }
+
+
+      if(zeny_mode == true) {
+          sortable.sort(function(a, b) {
+              return JSON.parse(b[3])['gains'][0] - JSON.parse(a[3])['gains'][0];
+          });
+
+          var creep = [];
+          for (var i = 0; i < sortable.length; i++) {
+              var name = sortable[i][0];
+              var craft_qty = sortable[i][1];
+              var craft_profit = formatter.format(sortable[i][2]);
+              var breakdown = sortable[i][3];
+              var snapping = formatter.format(sortable[i][4]);
+
+              creep.push(['<li>'+name + '<img src="images/'+name+'.png"  alt="'+name+'"/>' +' x '+ craft_qty +' can be crafted. \n will sold for '+ craft_profit +'\n total materials cost: ' + breakdown + '\n snapping: '+ snapping +' <div class="context"><p>'+JSON.stringify(recipes[name])+'</p></div><button class="craft" name="'+ name +'" qty="'+ craft_qty +'">Craft</button></li>', JSON.parse(breakdown)['gains'][0]]);
+          }
+
+          unused = sortRemainingItems(unused);
+
+          for (var l = 0; l < unused.length; l++) {
+            var v = unused[l][0];
+            creep.push(
+                ['<li>'+v + '<img src="images/'+v+'.png"  alt="'+v+'"/>' +' x '+ inventory[v] +' can be crafted. \n will sold for '+ (prices[v]['price']*inventory[v]) +'\n</li>', unused[l][1]]);
+          }
+
+          creep.sort(function(a, b) {
+              return b[1] - a[1];
+          });
+
+          for (var l = 0; l < creep.length; l++) {
+            var v = creep[l][0];
+            $('#results').append(v);
+            console.log(creep[l]);
+          }
+
+      }
+  }
+
+  function sortRemainingItems(parent, subject) {
+    var s = [];
+    for (var b in parent) {
+        if(parent[b] == 1)
+          s.push([b, prices[b]['price']*inventory[b]]);
+    }
+
+    s.sort(function(a, b) {
+        return b[1] - a[1];
+    });
+
+    return s;
+  }
+
+  function craftItem(name, qty) {
+
+    for (var i = 0; i < qty; i++) {
+      var a = new craftSimulator(Object.assign({}, inventory));
+      var result = a.craft(name);
+
+      $('#event-logs').prepend('<li><p>1 min(s) ago</p> Crafted 1 ' + name + ' <img class="tiny" src="images/'+name+'.png"/> ' + name +'</li>');
+      inventory = a.getInventory();
+      loadResult();
+    }
+  }
+
+  $(document).on('click', '.craft', function(e){
+      var name = $(this).attr('name');
+      craftItem(name, 1);
+      saveEvent('craftItem', [name, 1]);
+  });
+
+  $(document).on('submit', '#submit-it', function(e){
+    e.preventDefault();
+
+    $('.prompt').addClass('hide');
+
+    var index = $('#project').text();
+    var qty = $('#qty').val();
+    var src = $('#icon').attr('src');
+
+    addedItem(index, qty, src);
+
+    saveEvent('addedItem', [index, qty, src]);
+  });
+
+  </script>
+</body>
+</html>
