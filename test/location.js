@@ -8,15 +8,6 @@ var Location = function() {
         $this.distance = [$this.latitude, $this.longitude];
 
         lfg.addEvent('addedDistance', [user, localStorage.getItem('latitude'), localStorage.getItem('longitude')]);
-
-        lfg.addEvent('createdEvent', [
-            "Looking for kinky stuff",
-            "Hey I want something kinky bleh bleh bleh",
-            ["kinks", "video", "social"],
-            this.distance,
-            Date.now() - 60,
-            user
-          ]);
       return;
     }
 
@@ -35,14 +26,6 @@ var Location = function() {
 
           lfg.addEvent('addedDistance', [user, latitude, longitude]);
 
-          lfg.addEvent('createdEvent', [
-            "Looking for kinky stuff",
-            "Hey I want something kinky bleh bleh bleh",
-            ["kinks", "video", "social"],
-            $this.distance,
-            Date.now() - 60,
-            user
-          ]);
        }, function(err) {
           if(err.code == 1) {
              alert("Error: Access is denied!");
