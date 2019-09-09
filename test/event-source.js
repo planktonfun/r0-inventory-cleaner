@@ -37,7 +37,7 @@ var LFG = function() {
 				payload: JSON.stringify({eventName, param})
 			});
 */			this.currentUser.sendSimpleMessage({
-				text: eventName,
+				text: JSON.stringify({eventName, param}),
 				roomId: this.currentUser.rooms[0].id
 			});
 		} else {
