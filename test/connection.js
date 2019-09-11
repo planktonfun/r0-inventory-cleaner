@@ -16,6 +16,7 @@ var Events = function(username) {
 		'beer pong': 'orange',
 		'random': 'black'
 	};
+	this.empty = true;
 
 	this.createEvent = function(title, desc, tags, location, time, author) {
 
@@ -66,7 +67,12 @@ var Events = function(username) {
             </div>
 		`;
 
-		$('.demo-content').append(html);
+		$('.event-contents').prepend(html);
+
+		if(this.empty) {
+			this.empty = false;
+			$('.empty-space').remove();
+		}
 	};
 
 	this.addPerson = function(person) {
