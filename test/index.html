@@ -1,40 +1,143 @@
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="description" content="A front-end template that helps you build fast, modern mobile web apps.">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-  <title>Material Design Lite</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="description" content="A front-end template that helps you build fast, modern mobile web apps.">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+	<title>Material Design Lite</title>
 
-  <!-- Add to homescreen for Chrome on Android -->
-  <meta name="mobile-web-app-capable" content="yes">
-  <link rel="icon" sizes="192x192" href="images/android-desktop.png">
+	<!-- Add to homescreen for Chrome on Android -->
+	<meta name="mobile-web-app-capable" content="yes">
+	<link rel="icon" sizes="192x192" href="images/android-desktop.png">
 
-  <!-- Add to homescreen for Safari on iOS -->
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="apple-mobile-web-app-title" content="Material Design Lite">
-  <link rel="apple-touch-icon-precomposed" href="images/ios-desktop.png">
+	<!-- Add to homescreen for Safari on iOS -->
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="apple-mobile-web-app-title" content="Material Design Lite">
+	<link rel="apple-touch-icon-precomposed" href="images/ios-desktop.png">
 
-  <!-- Tile icon for Win8 (144x144 + tile color) -->
-  <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
-  <meta name="msapplication-TileColor" content="#3372DF">
-  <meta name="google-signin-scope" content="profile email">
-  <meta name="google-signin-client_id" content="118271867075-k8469sit1f0antlrtdch46nskjk5llsa.apps.googleusercontent.com">
-  <style type="text/css" media="screen">
-    body {
-      background: url('images/background.png');
-      background-size: 100% 100%;
-    }
-  </style>
+	<!-- Tile icon for Win8 (144x144 + tile color) -->
+	<meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
+	<meta name="msapplication-TileColor" content="#3372DF">
+	<meta name="google-signin-scope" content="profile email">
+	<meta name="google-signin-client_id" content="118271867075-k8469sit1f0antlrtdch46nskjk5llsa.apps.googleusercontent.com">
+	<link href="https://fonts.googleapis.com/css?family=Space+Mono&display=swap" rel="stylesheet">
+	<style type="text/css" media="screen">
+		body {
+			background: #FA983A;
+			/*background: url('Img/welcome.png');*/
+			/*background-size: contain;*/
+			/*background-position: center;*/
+			/*background-repeat: no-repeat;*/
+		}
+		.no-select {
+			-webkit-user-select: none;  /* Chrome all / Safari all */
+			-moz-user-select: none;     /* Firefox all */
+			-ms-user-select: none;      /* IE 10+ */
+			user-select: none;          /* Likely future */ 
+		}
+		.logo {
+			background: url(Img/logo.png);
+			background-size: 100% 100%;
+			position: absolute;
+			width: 260px;
+			height: 160px;
+			left: 58px;
+			top: 83px;
+			position: absolute;
+		}
+		.btn_goo {
+			background: url(Img/btn_goo.png);
+			background-size: 100% 100%;
+			position: absolute;
+			width: 250px;
+			height: 60px;
+			left: 63px;
+			top: 446px;
+		}
+		.btn_con {
+			background: url(Img/btn_con.png);
+			background-size: 100% 100%;
+			position: absolute;
+			width: 204px;
+			height: 60px;
+			left: 86px;
+			top: 553px;
+		}
+		.text {
+			position: absolute;
+			font-family: 'Space Mono', monospace;
+			font-style: normal;
+			font-weight: normal;
+			font-size: medium;
+			line-height: 27px;
+			text-align: center;
+			color: #FFFFFF;
+		}
+
+		.text_1 {
+			position: absolute;
+			width: 204px;
+			height: 35px;
+			left: 86px;
+			top: 358px;
+
+			font-style: normal;
+			font-weight: normal;
+			font-size: 18px;
+			line-height: 27px;
+			text-align: center;
+
+			color: #FFFFFF;
+		}
+
+		.text_2 {
+			position: absolute;
+			width: 204px;
+			height: 66px;
+			left: 86px;
+			top: 669px;
+
+			font-style: normal;
+			font-weight: normal;
+			font-size: 14px;
+			line-height: 21px;
+			text-align: center;
+
+			color: #FFFFFF;
+		}
+
+		p span
+		{
+			display: block;
+		}
+
+		a:link {
+			color: white;
+		}
+
+		a:visited {
+			color: white;
+		}
+
+		a:hover {
+			color: white;
+		}
+
+		a:active {
+			color: white;
+		}
+	</style>
 </head>
 <body>
-<div class="materialContainer"></div>
-<script type="text/javascript" charset="utf-8" async defer>
-  setTimeout(function(){
-    window.location = './dashboard.html';
-  }, 5000);
-
-  
-  // saveLocation();
-</script>
+	<div class="materialContainer">
+		<div class="logo no-select"></div>
+		<div class="text text_1">Log in or sign up</div>
+		<a href="register.html" class="btn_goo btn"></a>
+		<a href="register.html" class="btn_con btn"></a>
+		<p class="text text_2">
+			<span>By registering, you</span>
+			<span>agree to our</span>
+			<span><a href="./terms.html">Terms of Service</a></span>
+		</p>
+	</div>
 </body>

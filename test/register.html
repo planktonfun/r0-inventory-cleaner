@@ -1,0 +1,328 @@
+<head>
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!--Import materialize.css-->
+  <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+
+  <!--Let browser know website is optimized for mobile-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <link href="https://fonts.googleapis.com/css?family=Space+Mono&display=swap" rel="stylesheet">
+  <style type="text/css" media="screen">
+    body {
+      background: url(Img/register.png);
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      background: white;
+    }
+    .no-select {
+      -webkit-user-select: none;  /* Chrome all / Safari all */
+      -moz-user-select: none;     /* Firefox all */
+      -ms-user-select: none;      /* IE 10+ */
+      user-select: none;          /* Likely future */ 
+    }
+    .console {
+      background: url(Img/console.png);
+      background-size: 100% 100%;
+      width: 181px;
+      height: 181px;
+      left: 97px;
+      top: 39px;
+      position: absolute;
+    }
+    .avatar-position {
+      width: 30%;
+      height: 17%;
+      left: 35%;
+      top: 59%;
+      position: absolute;
+    }
+    .avatar {
+      background: url(Img/avatar.png);
+      background-size: 100% 100%;
+      width: 30%;
+      height: 17%;
+      left: 35%;
+      top: 59%;
+      position: absolute;
+      z-index: 1;
+    }
+    .btn_next {
+      background: #FA983A;
+      position: absolute;
+      width: 320px;
+      height: 60px;
+      left: 28px;
+      top: 700px;
+      padding: 12px;
+    }
+    .btn_con {
+      background: url(Img/btn_con.png);
+      background-size: 100% 100%;
+      width: 54.66%;
+      height: 7.63%;
+      left: 23%;
+      top: 68%;
+      position: absolute;
+    }
+    .text {
+      position: absolute;
+      font-family: 'Space Mono', monospace;
+      font-style: normal;
+      font-weight: bold;
+      font-size: medium;
+      line-height: 24px;
+      text-align: center;
+      color: #FFFFFF;
+    }
+
+    .text_1 {
+      position: absolute;
+      width: 296px;
+      height: 68px;
+      left: 40px;
+      top: 208px;
+
+      font-style: normal;
+      font-weight: normal;
+      font-size: 24px;
+      line-height: 36px;
+      text-align: center;
+
+      color: #FA983A;
+    }
+
+    .text_2 {
+      width: 65%;
+      height: 10%;
+      left: 18%;
+      top: 30%;
+      font-weight: normal;
+      font-size: 15px;
+      line-height: 15px;
+      color: #847F7A;
+    }
+
+    .text_3 {
+      color: #847F7A;
+      font-weight: normal;
+      position: absolute;
+      left: 18%;
+      top: 77%;
+      font-size: 13px;
+      width: 65%;
+      height: 4%;
+    }
+
+    .line_1 {
+      position: absolute;
+      width: 11%;
+      height: 0.5%;
+      left: 35%;
+      top: 96%;
+      background: #EAEAEA;
+    }
+
+    .line_active {
+      position: absolute;
+      width: 11%;
+      height: 0.5%;
+      left: 35%;
+      top: 96%;
+      background: #FA983A;
+    }
+
+    .line_2 {
+      position: absolute;
+      width: 11%;
+      height: 0.5%;
+      left: 54%;
+      top: 96%;
+      background: #EAEAEA;
+    }
+
+    p span
+    {
+      display: block;
+    }
+
+    input {
+      color: #F6B93B;
+      font-family: Space Mono;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 21px;
+      text-align: center;
+    }
+
+    /* label color */
+    .input-field label {
+     color: #847F7A;
+   }
+   /* label focus color */
+   .input-field input[type=text]:focus + label {
+     color: #847F7A;
+   }
+   /* label underline focus color */
+   .input-field input[type=text]:focus {
+     border-bottom: 1px solid #847F7A;
+     box-shadow: 0 1px 0 0 #847F7A;
+   }
+   /* valid color */
+   .input-field input[type=text].valid {
+     border-bottom: 1px solid #847F7A;
+     box-shadow: 0 1px 0 0 #847F7A;
+   }
+   /* invalid color */
+   .input-field input[type=text].invalid {
+     border-bottom: 1px solid #847F7A;
+     box-shadow: 0 1px 0 0 #847F7A;
+   }
+   /* icon prefix focus color */
+   .input-field .prefix.active {
+     color: #847F7A;
+   }
+   input[type=text].valid:not(.browser-default),
+   input[type=text].valid:not(.browser-default):focus {
+    border-bottom: 1px solid #ffb300;
+    -webkit-box-shadow: 0 1px 0 0 #ffb300;
+    box-shadow: 0 1px 0 0 #ffb300;
+    font-size: 14px;
+  }
+  input[type=text]:not(.browser-default):focus.valid ~ label {
+    color: #847F7A;
+  }
+  input[type=text]:not(.browser-default).validate + label {
+    left: 17%;
+    top: 21%;
+    font-size: 17px;
+  }
+  a:link {
+    text-decoration: none;
+  }
+
+  a:visited {
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  a:active {
+    text-decoration: underline;
+  }
+
+  .text_4 {
+    position: absolute;
+    width: 307px;
+    height: 37px;
+    left: 34px;
+    top: 349px;
+
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 27px;
+    text-align: center;
+
+    color: #847F7A;
+  }
+
+  .input_1{
+    position: absolute;
+    width: 307px !important;
+    height: 36px !important;
+    left: 34px;
+    top: 386px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px !important;
+    line-height: 21px;
+    text-align: center;
+    color: #F6B93B;
+  }
+
+  .text_2 {
+    width: 77%;
+    height: 10%;
+    left: 14%;
+    top: 31%;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 15px;
+    color: #847F7A;
+  }
+
+  .avatar-position, .avatar {
+    position: absolute;
+    width: 138px;
+    height: 141.15px;
+    left: 119px;
+    top: 477px;
+    border-radius: 50%;
+  }
+
+  .text_3 {
+
+    position: absolute;
+    width: 307px;
+    height: 37px;
+    left: 34px;
+    top: 632px;
+
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 27px;
+    text-align: center;
+
+    color: #847F7A;
+  }
+</style>
+</head>
+<body>
+  <div class="materialContainer">
+    <div class="console no-select"></div>
+    <div class="text text_1">Hi there!</div>
+    <div class="text text_2">Let's help you get started</div>
+    <div class="text text_4">What's your LFG name?</div>
+    <input class="input_1" />
+    <div class="row">
+      <div class="btn-floating pulse avatar-position orange"></div>
+      <div class="btn-floating avatar-position white"></div>
+        <input id="upload-image" type="file" style="display: none"/>
+      <div class="avatar no-select">
+      </div>
+      <div class="text text_3">Upload your display avatar</div>
+      <!-- <a href="interest.html" class="btn_next btn"></a> -->
+      <a href="interest.html" class="waves-effect waves-light btn btn_next orange darken-1">Next</a>
+    </div>
+    <div class="mini-tabs">
+      <div class="line_1"></div>
+      <div class="line_2"></div>
+      <div class="line_active"></div>
+    </div>
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="js/materialize.js"></script>
+    <script>
+      $('.avatar').click(function(){
+        $('#upload-image').click();
+      });
+      function readURL(input) {
+        if (input.files && input.files[0]) {
+          var reader = new FileReader();
+          reader.onload = function(e) {
+            localStorage.setItem('profile-pic', e.target.result);
+            $('.avatar').css("background", "url("+e.target.result+")");
+          }
+          reader.readAsDataURL(input.files[0]);
+        }
+      }
+      $('#upload-image').on('change',function(){
+        readURL(this);
+      });
+    </script>
+  </body>

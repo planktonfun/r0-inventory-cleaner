@@ -1,0 +1,311 @@
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="A front-end template that helps you build fast, modern mobile web apps.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <title>Material Design Lite</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+
+  <link href="https://fonts.googleapis.com/css?family=Space+Mono&display=swap" rel="stylesheet">
+  <style type="text/css" media="screen">
+    body {
+      background: url(Img/terms.png);
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      background: white;
+    }
+    .no-select {
+      -webkit-user-select: none;  /* Chrome all / Safari all */
+      -moz-user-select: none;     /* Firefox all */
+      -ms-user-select: none;      /* IE 10+ */
+      user-select: none;          /* Likely future */ 
+    }
+    .arrow {
+      background: url(Img/left-arrow.png);
+      background-size: 100% 100%;
+      width: 7%;
+      height: 3%;
+      left: 5%;
+      top: 3%;
+      position: absolute;
+    }
+
+    .icon_1 {
+      background: url(Img/cp.png);
+      background-size: 100% 100%;
+      width: 14.5%;
+      height: 8%;
+      left: 21%;
+      top: 56.5%;
+      position: absolute;
+    }
+    .icon_2 {
+      background: url(Img/icon.png);
+      background-size: 100% 100%;
+      width: 14.5%;
+      height: 8%;
+      left: 44%;
+      top: 56.5%;
+      position: absolute;
+    }
+    .icon_3 {
+      background: url(Img/ps.png);
+      background-size: 100% 100%;
+      width: 14.5%;
+      height: 8%;
+      left: 65%;
+      top: 56.5%;
+      position: absolute;
+    }
+    .icon_4 {
+      background: url(Img/pc.png);
+      background-size: 100% 100%;
+      width: 14.5%;
+      height: 8%;
+      left: 30%;
+      top: 66%;
+      position: absolute;
+    }
+    .icon_5 {
+      background: url(Img/switch.png);
+      background-size: 100% 100%;
+      width: 14.5%;
+      height: 8%;
+      left: 56%;
+      top: 66%;
+      position: absolute;
+    }
+
+    .btn_next {
+      /*background: url(Img/btn_goo.png);*/
+      /*background-size: 100% 100%;*/
+      background: #FA983A;
+      width: 320px;
+      height: 60px;
+      left: 28px;
+      top: 700px;
+      position: absolute;
+      padding: 12px;
+    }
+    .btn_con {
+      background: url(Img/btn_con.png);
+      background-size: 100% 100%;
+      width: 54.66%;
+      height: 7.63%;
+      left: 23%;
+      top: 68%;
+      position: absolute;
+    }
+    .text {
+      position: absolute;
+      font-family: 'Space Mono', monospace;
+      font-style: normal;
+      font-weight: normal;
+      font-size: medium;
+      line-height: 24px;
+      text-align: center;
+      color: #FFFFFF;
+    }
+
+    .text_1 {
+      position: absolute;
+      width: 296px;
+      height: 61px;
+      left: 34px;
+      top: 64px;
+
+      font-style: normal;
+      font-weight: normal;
+      font-size: 24px;
+      line-height: 36px;
+      text-align: center;
+
+      color: #FA983A;
+    }
+
+    .text_2 {
+      position: absolute;
+      width: 319px;
+      height: 406px;
+      left: 34px;
+      top: 123px;
+
+      font-family: Space Mono;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 27px;
+
+      color: #847F7A;
+    }
+
+    .input_1 {
+      left: 19%;
+      top: 18%;
+      width: 69%;
+      position: absolute;
+    }
+
+    .input_2 {
+      left: 19%;
+      top: 31%;
+      position: absolute;
+    }
+
+    .text_3 {
+      color: #847F7A;
+      font-weight: normal;
+      position: absolute;
+      left: 18%;
+      top: 77%;
+      font-size: 13px;
+    }
+
+    .line_1 {
+      position: absolute;
+      width: 11%;
+      height: 0.5%;
+      left: 35%;
+      top: 96%;
+      background: #EAEAEA;
+    }
+
+    .line_active {
+      position: absolute;
+      width: 11%;
+      height: 0.5%;
+      left: 35%;
+      top: 96%;
+      background: #FA983A;
+    }
+
+    .line_2 {
+      position: absolute;
+      width: 11%;
+      height: 0.5%;
+      left: 54%;
+      top: 96%;
+      background: #EAEAEA;
+    }
+
+    p span
+    {
+      display: block;
+    }
+
+    input {
+      color: #F6B93B;
+      font-family: Space Mono;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 21px;
+      text-align: center;
+    }
+
+    /* label color */
+    .input-field label {
+     color: #847F7A;
+   }
+   /* label focus color */
+   .input-field input[type=text]:focus + label {
+     color: #847F7A;
+   }
+   /* label underline focus color */
+   .input-field input[type=text]:focus {
+     border-bottom: 1px solid #847F7A;
+     box-shadow: 0 1px 0 0 #847F7A;
+   }
+   /* valid color */
+   .input-field input[type=text].valid {
+     border-bottom: 1px solid #847F7A;
+     box-shadow: 0 1px 0 0 #847F7A;
+   }
+   /* invalid color */
+   .input-field input[type=text].invalid {
+     border-bottom: 1px solid #847F7A;
+     box-shadow: 0 1px 0 0 #847F7A;
+   }
+   /* icon prefix focus color */
+   .input-field .prefix.active {
+     color: #847F7A;
+   }
+   input[type=text].valid:not(.browser-default),
+   input[type=text].valid:not(.browser-default):focus {
+    border-bottom: 1px solid #ffb300;
+    -webkit-box-shadow: 0 1px 0 0 #ffb300;
+    box-shadow: 0 1px 0 0 #ffb300;
+    font-size: 14px;
+  }
+  input[type=text]:not(.browser-default):focus.valid ~ label {
+    color: #847F7A;
+  }
+  input[type=text]:not(.browser-default).validate + label {
+    left: 17%;
+    top: 21%;
+    font-size: 17px;
+  }
+
+  .select-wrapper input.select-dropdown {
+    font-size: 11px;
+  }
+</style>
+</head>
+<body>
+  <div class="materialContainer">
+    <a href="index.html" class="arrow no-select"></a>
+    <div class="text text_1">Terms and Conditions</div>
+    <div class="text text_2">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc non eros vitae urna feugiat aliquet ultrices et magna. Nulla a purus mattis, porta nulla eu, condimentum neque. Maecenas placerat mi sit amet enim dapibus euismod. Donec euismod vulputate condimentum. Ut finibus sapien eget dui eleifend congue. Mauris commodo, nisi eu aliquet commodo, est felis rhoncus dolor, vitae tristique nulla enim vel sapien.
+    </div>
+    <a href="register.html" class="waves-effect waves-light btn btn_next orange darken-1">Accept</a>
+    <div class="mini-tabs">
+      <div class="line_1"></div>
+      <div class="line_2"></div>
+      <div class="line_active"></div>
+    </div>
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script
+    src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+    integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+    crossorigin="anonymous"></script>
+    <script src="js/materialize.js"></script>
+    <script>
+      $(document).ready(function(){
+        $('select').formSelect();
+      });
+
+      var screen_width = 375;
+      var screen_height = 860;
+      /** adjustments  */
+      $(".icon,.text").draggable({
+        stop: function () {
+          var l = ( 100 * parseFloat($(this).position().left / screen_width)) + "%" ;
+          var w = ( 100 * parseFloat($(this).width() / screen_width)) + "%" ;
+          var t = ( 100 * parseFloat($(this).position().top / screen_height)) + "%" ;
+          var h = ( 100 * parseFloat($(this).height() / screen_height)) + "%" ;
+          $(this).css("width", w);
+          $(this).css("height", h);
+          $(this).css("left", l);
+          $(this).css("top", t);
+        }
+      });
+      /** convert everything to percent  */
+      $(".icon,.text").each(function(){
+        var l = ( 100 * parseFloat($(this).position().left / screen_width)) + "%" ;
+        var w = ( 100 * parseFloat($(this).width() / screen_width)) + "%" ;
+        var t = ( 100 * parseFloat($(this).position().top / screen_height)) + "%" ;
+        var h = ( 100 * parseFloat($(this).height() / screen_height)) + "%" ;
+        console.log({l,t});
+        $(this).css("width", w);
+        $(this).css("height", h);
+        $(this).css("left", l);
+        $(this).css("top", t);
+      });
+    </script>
+  </body>

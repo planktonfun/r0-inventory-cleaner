@@ -1,0 +1,455 @@
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="A front-end template that helps you build fast, modern mobile web apps.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <title>Material Design Lite</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+
+  <link href="https://fonts.googleapis.com/css?family=Space+Mono&display=swap" rel="stylesheet">
+  <style type="text/css" media="screen">
+    body {
+      background: url(Img/interest-2.png);
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      background: white;
+    }
+    .no-select {
+      -webkit-user-select: none;  /* Chrome all / Safari all */
+      -moz-user-select: none;     /* Firefox all */
+      -ms-user-select: none;      /* IE 10+ */
+      user-select: none;          /* Likely future */ 
+    }
+    .arrow {
+      background: url(Img/left-arrow.png);
+      background-size: 100% 100%;
+      width: 7%;
+      height: 3%;
+      left: 5%;
+      top: 3%;
+      position: absolute;
+    }
+
+    .icon_1 {
+      background: url(Img/cp.png);
+      background-size: 100% 100%;
+      position: absolute;
+      width: 67px;
+      height: 67px;
+      left: 54px;
+      top: 457px;
+
+    }
+    .icon_2 {
+      background: url(Img/icon.png);
+      background-size: 100% 100%;
+      position: absolute;
+      width: 67px;
+      height: 67px;
+      left: 158px;
+      top: 457px;
+    }
+    .icon_3 {
+      background: url(Img/ps.png);
+      background-size: 100% 100%;
+      position: absolute;
+      width: 67px;
+      height: 67px;
+      left: 254px;
+      top: 457px;
+    }
+    .icon_4 {
+      background: url(Img/pc.png);
+      background-size: 100% 100%;
+      position: absolute;
+      width: 67px;
+      height: 67px;
+      left: 96px;
+      top: 534px;
+    }
+    .icon_5 {
+      background: url(Img/switch.png);
+      background-size: 100% 100%;
+      position: absolute;
+      width: 67px;
+      height: 67px;
+      left: 217px;
+      top: 534px;
+
+    }
+
+    .btn_next {
+      /*background: url(Img/btn_goo.png);*/
+      /*background-size: 100% 100%;*/
+      background: #FA983A;
+      width: 320px;
+      height: 60px;
+      left: 28px;
+      top: 700px;
+
+      position: absolute;
+      padding: 12px;
+    }
+    .btn_con {
+      background: url(Img/btn_con.png);
+      background-size: 100% 100%;
+      width: 54.66%;
+      height: 7.63%;
+      left: 23%;
+      top: 68%;
+      position: absolute;
+    }
+    .text {
+      position: absolute;
+      font-family: 'Space Mono', monospace;
+      font-style: normal;
+      font-weight: bold;
+      font-size: medium;
+      line-height: 24px;
+      text-align: center;
+      color: #FFFFFF;
+    }
+
+    .text_1 {
+      width: 57.0667%;
+      height: 5.81395%;
+      left: 16.2%;
+      top: 9.5236%;
+      font-weight: normal;
+      color: #FA983A;
+    }
+
+    .text_2 {
+      width: 78%;
+      height: 10%;
+      left: 12%;
+      top: 50%;
+      font-weight: normal;
+      font-size: 13px;
+      line-height: 15px;
+      color: #847F7A;
+    }
+
+    .input_1 {
+      left: 19%;
+      top: 18%;
+      width: 69%;
+      position: absolute;
+    }
+
+    .input_2 {
+      left: 19%;
+      top: 31%;
+      position: absolute;
+    }
+
+    .text_3 {
+      color: #847F7A;
+      font-weight: normal;
+      position: absolute;
+      left: 18%;
+      top: 77%;
+      font-size: 13px;
+    }
+
+    .line_1 {
+      position: absolute;
+      width: 11%;
+      height: 0.5%;
+      left: 35%;
+      top: 96%;
+      background: #EAEAEA;
+    }
+
+    .line_active {
+      position: absolute;
+      width: 11%;
+      height: 0.5%;
+      left: 54%;
+      top: 96%;
+      background: #FA983A;
+    }
+
+    .line_2 {
+      position: absolute;
+      width: 11%;
+      height: 0.5%;
+      left: 54%;
+      top: 96%;
+      background: #EAEAEA;
+    }
+
+    p span
+    {
+      display: block;
+    }
+
+    input {
+      color: #F6B93B;
+      font-family: Space Mono;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 21px;
+      text-align: center;
+    }
+
+    /* label color */
+    .input-field label {
+     color: #847F7A;
+   }
+   /* label focus color */
+   .input-field input[type=text]:focus + label {
+     color: #847F7A;
+   }
+   /* label underline focus color */
+   .input-field input[type=text]:focus {
+     border-bottom: 1px solid #847F7A;
+     box-shadow: 0 1px 0 0 #847F7A;
+   }
+   /* valid color */
+   .input-field input[type=text].valid {
+     border-bottom: 1px solid #847F7A;
+     box-shadow: 0 1px 0 0 #847F7A;
+   }
+   /* invalid color */
+   .input-field input[type=text].invalid {
+     border-bottom: 1px solid #847F7A;
+     box-shadow: 0 1px 0 0 #847F7A;
+   }
+   /* icon prefix focus color */
+   .input-field .prefix.active {
+     color: #847F7A;
+   }
+   input[type=text].valid:not(.browser-default),
+   input[type=text].valid:not(.browser-default):focus {
+    border-bottom: 1px solid #ffb300;
+    -webkit-box-shadow: 0 1px 0 0 #ffb300;
+    box-shadow: 0 1px 0 0 #ffb300;
+    font-size: 14px;
+  }
+  input[type=text]:not(.browser-default):focus.valid ~ label {
+    color: #847F7A;
+  }
+  input[type=text]:not(.browser-default).validate + label {
+    left: 17%;
+    top: 21%;
+    font-size: 17px;
+  }
+
+  .select-wrapper input.select-dropdown {
+    font-size: 11px;
+  }
+
+  .text_1 {
+    position: absolute;
+    width: 296px;
+    height: 61px;
+    left: 40px;
+    top: 78px;
+
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 36px;
+    text-align: center;
+
+    color: #FA983A;
+
+  }
+
+  .text_3 {
+    position: absolute;
+    width: 307px;
+    height: 62px;
+    left: 34px;
+    top: 143px;
+
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 27px;
+    text-align: center;
+
+    color: #847F7A;
+  }
+
+  .text_4 {
+   position: absolute;
+   width: 307px;
+   height: 33px;
+   left: 34px;
+   top: 268px;
+
+   font-style: normal;
+   font-weight: normal;
+   font-size: 18px;
+   line-height: 27px;
+   text-align: center;
+
+   color: #847F7A;
+
+ }
+
+ .text_2 {
+   position: absolute;
+   width: 307px;
+   height: 37px;
+   left: 34px;
+   top: 402px;
+
+   font-style: normal;
+   font-weight: normal;
+   font-size: 18px;
+   line-height: 27px;
+   text-align: center;
+
+   color: #847F7A;
+
+ }
+
+ .text_5 {
+  position: absolute;
+  width: 307px;
+  height: 32px;
+  left: 34px;
+  top: 341px;
+
+  font-family: Space Mono;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 21px;
+  text-align: center;
+
+  color: #AEAEAE;
+}
+
+.input_1 {
+  position: absolute;
+  width: 307px;
+  height: 32px;
+  left: 34px;
+  top: 206px;
+
+  font-family: Space Mono;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 21px;
+  text-align: center;
+
+  color: #F6B93B;
+}
+
+.input_2 {
+  position: absolute;
+  width: 307px !important;
+  height: 32px !important;
+  left: 34px;
+  top: 308px;
+
+  font-family: Space Mono;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px !important;
+  line-height: 21px;
+  text-align: center;
+
+  color: #F6B93B;
+}
+
+.icons::hover {
+  opacity: 1;
+}
+
+.dropdown-content li > span {
+  color: #F6B93B;
+}
+</style>
+</head>
+<body>
+  <div class="materialContainer">
+    <a href="register.html" class="arrow no-select"></a>
+    <div class="input_1 input-field col s12 m6">
+      <select class="icons">
+        <option value="" class="amber-text text-darken-3" disabled selected>Choose your option</option>
+        <option value="" class="amber-text text-darken-3" data-icon="Img/a.jfif">Adventure game</option>
+        <option value="" class="amber-text text-darken-3" data-icon="Img/b.jfif">Real-time strategy</option>
+        <option value="" class="amber-text text-darken-3" data-icon="Img/c.jfif">puzzle video game</option>
+        <option value="" class="amber-text text-darken-3" data-icon="Img/d.jfif">Action game</option>
+        <option value="" class="amber-text text-darken-3" data-icon="Img/e.jfif">Stealth game</option>
+        <option value="" class="amber-text text-darken-3" data-icon="Img/f.jfif">Massive multiplayer online game (MMO)</option>
+      </select>
+    </div>
+    <input type="text" class="validate input_2" />
+    <div class="text text_1">You're almost there</div>
+    <div class="text text_2">Game systems you play most?</div>
+    <div class="text text_3">What's games are you interested in?</div>
+    <div class="text text_4">Any specific game you like?</div>
+    <a href="#" class="text text_5">Add more games</a>
+    <a href="dash.html" class="waves-effect waves-light btn btn_next orange darken-1">Let's go</a>
+    <a href="#" class="icons icon_1"></a>
+    <a href="#" class="icons icon_2"></a>
+    <a href="#" class="icons icon_3"></a>
+    <a href="#" class="icons icon_4"></a>
+    <a href="#" class="icons icon_5"></a>
+    <div class="mini-tabs">
+      <div class="line_1"></div>
+      <div class="line_2"></div>
+      <div class="line_active"></div>
+    </div>
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script
+    src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+    integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+    crossorigin="anonymous"></script>
+    <script src="js/materialize.js"></script>
+    <script>
+      $(document).ready(function(){
+        $('select').formSelect();
+      });
+
+      var screen_width = 375;
+      var screen_height = 812;
+      /** adjustments  */
+      $(".icon,.text").draggable({
+        stop: function () {
+          var l = ( 100 * parseFloat($(this).position().left / screen_width)) + "%" ;
+          var w = ( 100 * parseFloat($(this).width() / screen_width)) + "%" ;
+          var t = ( 100 * parseFloat($(this).position().top / screen_height)) + "%" ;
+          var h = ( 100 * parseFloat($(this).height() / screen_height)) + "%" ;
+          $(this).css("width", w);
+          $(this).css("height", h);
+          $(this).css("left", l);
+          $(this).css("top", t);
+        }
+      });
+      /** convert everything to percent  */
+      $(".icon,.text").each(function(){
+        var l = ( 100 * parseFloat($(this).position().left / screen_width)) + "%" ;
+        var w = ( 100 * parseFloat($(this).width() / screen_width)) + "%" ;
+        var t = ( 100 * parseFloat($(this).position().top / screen_height)) + "%" ;
+        var h = ( 100 * parseFloat($(this).height() / screen_height)) + "%" ;
+        console.log({l,t});
+        $(this).css("width", w);
+        $(this).css("height", h);
+        $(this).css("left", l);
+        $(this).css("top", t);
+      });
+
+      $('.icons').css('opacity','0.5');
+      $('.icons').on('click',function(){ 
+        if($(this).css('opacity') == 0.5) {
+          $(this).css('opacity','1');
+        } else {
+          $(this).css('opacity','0.5');
+        }
+      });
+    </script>
+  </body>
