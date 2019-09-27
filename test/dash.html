@@ -17,7 +17,7 @@
       background-size: 100% auto;
       background-position: top;
       background-repeat: no-repeat;
-      background: #EAEAEA;
+      background: #F2F2F2;
     }
     .no-select {
       -webkit-user-select: none;  /* Chrome all / Safari all */
@@ -37,6 +37,8 @@
       height: 6.62791%;
       left: 4.8%;
       top: 4.18605%;
+      border-radius: 50%;
+      border: 6px solid orange;
     }
     .avatar-mini-status {
       background: url(Img/status.png);
@@ -145,6 +147,7 @@
       background: url('Img/icon_1.png');
       width: 50.16px;
       height: 51px;
+      border-radius: 50%;
     }
     .icon_2 {
       position: relative;
@@ -311,6 +314,18 @@
 
     }
 
+    /*.people .icon::after {
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      content: "";
+      border-radius: 50%;
+      background: #78E08F00;
+      display: block;
+      position: relative;
+      border: 6px solid orange;
+    }*/
     .people .icon::before {
       width: 14px;
       height: 14px;
@@ -465,8 +480,8 @@
       font-size: 9px;
       line-height: 13px;
       color: #FA983A;
-      margin-right: 2px;
-      margin-bottom: 0px;
+      margin-right: 6px;
+      margin-top: 6px;
     }
 
     .comm_tab {
@@ -488,6 +503,10 @@
       margin-right: 17.05px;
       display: inline-block;
     }
+
+    .dark-mode {
+      background: #474545;
+    }
   </style>
 </head>
 <body>
@@ -500,61 +519,14 @@
     <div class="text text_1">Makati City</div>
     <div class="text text_2">People</div>
     <div class="people">
-      <div class="icon icon_1"></div>
-      <div class="icon icon_2"></div>
-      <div class="icon icon_3"></div>
-      <div class="icon icon_4"></div>
-      <div class="icon icon_5"></div>
-      <div class="icon icon_5"></div>
-      <div class="icon icon_5"></div>
-      <div class="icon icon_5"></div>
-      <div class="icon icon_5"></div>
     </div>
     <a href="#" class="text text_3 tab_active tabby events-trigger">Events</a>
     <a href="#" class="text text_4 tabby community-trigger">Communities</a>
 
-    <div class="event_tab">
-      <div class="event-card">
-        <div class="pic event_1"></div>
-        <div class="text title">Tekken 7 tournament</div>
-        <div class="text date">28 June, 7:00 PM</div>
-        <div class="text context">3 friends joined</div>
-        <a href="#" class="text action">Get Tickets</a>
-      </div>
-      <div class="event-card">
-        <div class="pic event_2"></div>
-        <div class="text title">Dota 2 Invitational</div>
-        <div class="text date">2 July, 12:00 PM</div>
-        <div class="text context">8 friends joined</div>
-        <a href="#" class="text action">Get Tickets</a>
-      </div>
-    </div>
+    <div class="event_tab"></div>
+    <div class="comm_tab"></div>
 
-    <div class="comm_tab">
-      <div class="event-card">
-        <div class="pic event_1"></div>
-        <div class="text title">#everythingTekken</div>
-        <div class="text members">150 members</div>
-        <div class="tags-container">
-          <div class="chip">Tekken</div>
-          <div class="chip">Arcade</div>
-          <div class="chip">Fighting</div>
-          <div class="chip">Multiplayer</div>
-        </div>
-      </div>
-      <div class="event-card">
-        <div class="pic event_2"></div>
-        <div class="text title">#dotaSupreme</div>
-        <div class="text members">300 members</div>
-        <div class="tags-container">
-          <div class="chip">DOTA 2</div>
-          <div class="chip">MMORPG</div>
-          <div class="chip">PC RPG</div>
-          <div class="chip">Multiplayer</div>
-        </div>
-      </div>
-    </div>
-
+    <!-- SIDE NAVIGATION -->
     <ul id="slide-out" class="sidenav">
       <li><div class="user-view">
         <div class="background">
@@ -564,24 +536,161 @@
         <a href="#name"><span class="white-text name">John Doe</span></a>
         <a href="#email"><span class="white-text email">jdandturk@gmail.com</span></a>
       </div></li>
-      <li><a href="#!"><i class="material-icons">cloud</i>First Link With Icon</a></li>
-      <li><a href="#!">Second Link</a></li>
+      <li><a class="subheader">Settings</a></li>
+      <li><a href="#!" class="waves-effect dm-toggle-on">Turn On Dark Mode</a></li>
+      <li><a href="#!" class="waves-effect dm-toggle-off">Turn Off Dark Mode</a></li>
       <li><div class="divider"></div></li>
-      <li><a class="subheader">Subheader</a></li>
-      <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
+      <li><a class="subheader">Actions</a></li>
+      <li><a class="waves-effect waves-light modal-trigger" href="#modal1">Add Event</a></li>
+      <li><a class="waves-effect waves-light modal-trigger" href="#modal2">Add Community</a></li>
+      <li><div class="divider"></div></li>
+      <li><a class="subheader">Profile</a></li>
+      <li><a class="waves-effect waves-light modal-trigger" href="#modal3" href="#!">Friends</a></li>
     </ul>
 
-  </div>
-  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-  <script
-  src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
-  integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
-  crossorigin="anonymous"></script>
-  <script src="js/materialize.js"></script>
-  <script>
-    var screen_width = 375;
-    var screen_height = 812;
-    /** adjustments  */
+
+    <!-- EVENT MODAL -->
+    <div id="modal1" class="modal">
+      <div class="modal-content">
+        <form class="col s12">
+          <div class="row">
+            <div class="input-field col s12">
+              <input placeholder="Placeholder" id="event_title" type="text" class="validate" data-length="20">
+              <label for="event_title">Event title</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s6">
+              <input placeholder="Placeholder" id="event_date_from" type="text" class="datepicker">
+              <label for="event_date_from">From Date</label>
+            </div>
+            <div class="input-field col s6">
+              <input placeholder="Placeholder" id="event_time_from" type="text" class="timepicker">
+              <label for="event_time_from">Time</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s6">
+              <input placeholder="Placeholder" id="event_date_to" type="text" class="datepicker">
+              <label for="event_date_to">To Date</label>
+            </div>
+            <div class="input-field col s6">
+              <input placeholder="Placeholder" id="event_time_to" type="text" class="timepicker">
+              <label for="event_time_to">Time</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="file-field input-field">
+              <div class="btn">
+                <span>Upload Image</span>
+                <input type="file" id="event_image">
+              </div>
+              <div class="file-path-wrapper">
+                <input class="file-path validate" type="text">
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
+        <a href="#!" class="modal-close waves-effect waves-green event_post btn-flat">Post</a>
+      </div>
+    </div>
+
+    <!-- COMMUNITY MODAL -->
+    <div id="modal2" class="modal">
+      <div class="modal-content">
+        <form class="col s12">
+          <div class="row">
+            <div class="input-field col s12">
+              <input placeholder="Placeholder" id="comm_title" type="text" class="validate" data-length="20">
+              <label for="comm_title">Comunity Hash Tag</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <div id="comm_tags" class="chips chips-placeholder"></div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="file-field input-field">
+              <div class="btn">
+                <span>Upload Image</span>
+                <input type="file" id="comm_image">
+              </div>
+              <div class="file-path-wrapper">
+                <input class="file-path validate" type="text">
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
+        <a href="#!" class="modal-close waves-effect waves-green comm_post btn-flat">Post</a>
+      </div>
+    </div>
+
+    <!-- FRIENDS MODAL -->
+    <div id="modal3" class="modal bottom-sheet">
+      <div class="modal-content">
+        <h4>Friends</h4>
+        <ul class="collection">
+          <li class="collection-item avatar">
+            <img src="https://s3.amazonaws.com/uifaces/faces/twitter/pixage/128.jpg" alt="" class="circle">
+            <span class="title">Title</span>
+            <p>First Line <br>
+             Second Line
+           </p>
+           <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+         </li>
+         <li class="collection-item avatar">
+          <img src="https://s3.amazonaws.com/uifaces/faces/twitter/leeiio/128.jpg" alt="" class="circle">
+          <span class="title">Title</span>
+          <p>First Line <br>
+           Second Line
+         </p>
+         <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+       </li>
+       <li class="collection-item avatar">
+        <img src="https://s3.amazonaws.com/uifaces/faces/twitter/aiiaiiaii/128.jpg" alt="" class="circle">
+        <span class="title">Title</span>
+        <p>First Line <br>
+         Second Line
+       </p>
+       <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+     </li>
+     <li class="collection-item avatar">
+      <img src="https://s3.amazonaws.com/uifaces/faces/twitter/hellofeverrrr/128.jpg" alt="" class="circle">
+      <span class="title">Title</span>
+      <p>First Line <br>
+       Second Line
+     </p>
+     <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+   </li>
+ </ul>
+</div>
+<div class="modal-footer">
+  <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
+</div>
+</div>
+
+</div>
+<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script
+src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+crossorigin="anonymous"></script>
+<script src="js/materialize.js"></script>
+<script src="js/library.js"></script>
+<script>
+  var screen_width = 375;
+  var screen_height = 812;
+  var isDarkMode = false;
+  var tag_placeholder;
+
+  /** adjustments  */
     // $(".icon,.text").draggable({
     //   stop: function () {
     //     var l = ( 100 * parseFloat($(this).position().left / screen_width)) + "%" ;
@@ -607,37 +716,132 @@
     //   $(this).css("top", t);
     // });
 
-    $(".tabby").click(function(){
+    $(".tabby").on('click touchend', function(){
       $(".tabby").removeClass('tab_active');
       $(this).addClass('tab_active');
     });
 
-    $(".events-trigger").click(function(){
+    $(".events-trigger").on('click touchend', function(){
       $(".comm_tab").hide();
       $(".event_tab").show();
     });
 
-    $(".community-trigger").click(function(){
+    $(".community-trigger").on('click touchend', function(){
       $(".event_tab").hide();
       $(".comm_tab").show();
     });
 
-    document.addEventListener('DOMContentLoaded', function() {
-      var elems = document.querySelectorAll('.sidenav');
-      var instances = M.Sidenav.init(elems, {});
+    $(document).ready(function(){
+      $('.sidenav').sidenav();
+      $('.modal').modal();
+      $('.datepicker').datepicker();
+      $('.timepicker').timepicker();
+      $('#event_title').characterCounter();
+      tag_placeholder = $('.chips-placeholder').chips({
+        placeholder: 'Enter tags',
+        secondaryPlaceholder: '+Tag',
+        limit: 4
+      });
     });
 
-  // Initialize collapsible (uncomment the lines below if you use the dropdown variation)
-  // var collapsibleElem = document.querySelector('.collapsible');
-  // var collapsibleInstance = M.Collapsible.init(collapsibleElem, options);
+    $('.profile-pic').attr('src',localStorage.getItem('profile-pic'));
+    $('.avatar-mini').css('background','url('+localStorage.getItem('profile-pic')+')');
 
-  // Or with jQuery
+    function darkModeOff() {
+      isDarkMode = false;
+      localStorage.setItem('dark-mode','off');
+      $('.event-card').removeClass('dark-mode');
+      $('body').css('background', '#F2F2F2');
+    }
+    function darkModeOn() {
+      isDarkMode = true;
+      localStorage.setItem('dark-mode','on');
+      $('.event-card').addClass('dark-mode');
+      $('body').css('background', '#535353');
+    }
 
-  $(document).ready(function(){
-    $('.sidenav').sidenav();
-  });
+    $('.dm-toggle-on').on('click touchend', darkModeOn);
+    $('.dm-toggle-off').on('click touchend', darkModeOff);
 
+    if(localStorage.getItem('dark-mode')=="on") {
+      darkModeOn();
+    }
 
-  $('.profile-pic').attr('src',localStorage.getItem('profile-pic'));
+    $(document).on( 'keyup', '#comm_tags input', function(e){
+      var text = $(this).val();
+
+      if(text.length < 2) {
+        return;
+      }
+
+      if(text[text.length-1] != " ") {
+        return;
+      }
+
+      if(text.trim().length < 1) {
+        return;
+      }
+
+      var instance = M.Chips.getInstance($('#comm_tags'));
+      instance.addChip({
+        tag: text.trim(),
+        image: '', // optional
+      });
+
+      $(this).val('');
+    });
+
+    $('#event_image, #comm_image').on('change',function(){
+      readURL(this);
+    });
+
+    $('.event_post').on('click touchend', function(){
+      var data = {
+        event_title: $('#event_title').val(),
+        event_date_from: $('#event_date_from').val(),
+        event_time_from: $('#event_time_from').val(),
+        event_date_to: $('#event_date_to').val(),
+        event_time_to: $('#event_time_to').val(),
+        event_image: readURLResult
+      };
+
+      addEventCard(
+        data.event_image,
+        data.event_title,
+        data.event_date_from,
+        data.event_time_from
+      );
+    });
+
+    $('.comm_post').on('click touchend', function(){
+      var instance = M.Chips.getInstance($('#comm_tags'));
+
+      var data = {
+        comm_title: $('#comm_title').val(),
+        comm_tags: instance.chipsData,
+        comm_image: readURLResult
+      };
+
+      var tags = [];
+      for (var i = 0; i < data.comm_tags.length; i++) {
+        tags.push(data.comm_tags[i].tag);
+      }
+
+      addCommCard(data.comm_image, data.comm_title, tags);
+
+    });
+
+    // PREP
+    addPerson('https://s3.amazonaws.com/uifaces/faces/twitter/mr_subtle/128.jpg');
+    addPerson('https://s3.amazonaws.com/uifaces/faces/twitter/joshuaraichur/128.jpg');
+    addPerson('https://s3.amazonaws.com/uifaces/faces/twitter/hiemil/128.jpg');
+    addPerson('https://s3.amazonaws.com/uifaces/faces/twitter/posterjob/128.jpg');
+    addPerson('https://s3.amazonaws.com/uifaces/faces/twitter/smalonso/128.jpg');
+    addPerson('https://s3.amazonaws.com/uifaces/faces/twitter/xripunov/128.jpg');
+
+    addEventCard('Img/preview_1.png', 'Tekken 7 tournament', '28 June', '7:00 PM');
+    addEventCard('Img/preview_2.png', 'Dota 2 Invitational', '2 July', '12:00 PM');
+    addCommCard('Img/preview_1.png', 'everythingTekken', ['Tekken','Arcade','Fighting','Multiplayer']);
+    addCommCard('Img/preview_2.png', 'dotaSupreme', ['DOTA 2', 'MMORPG', 'PC RPG', 'Multiplayer']);
 </script>
 </body>
