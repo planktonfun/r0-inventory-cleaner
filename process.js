@@ -36,7 +36,7 @@ var recipes = {
     "survivors_rod_1s": {"coal":15,"garlet":240,"cost": 20000, "profit": 91355},
     "release_of_wish_1s": {"zircon":30,"coal":20,"garlet":280,"cost": 25000, "profit": 294680},
     "gakkung_bow_1s": {"coal":15,"sticky_mucus":240,"cost": 20000, "profit": 126355},
-    "rune_shoes": {"orcish_voucher":30,"soft_feather":2,"skel_bone":25, "profit": 374461},
+    "rune_shoes": {"cost":30000, "orcish_voucher":30,"soft_feather":2,"skel_bone":25, "profit": 374461},
     "blood_axe_1s": {"orcish_voucher":35,"bloody_rune":2,"skel_bone":80,"necklace_of_wisdom":350, "profit": 486566},
     "guillotine_katar_1s": {"orcish_voucher":30,"heroic_emblem":2,"skel_bone":25, "profit": 303691},
     "feather_mace_1s": {"orcish_voucher":10,"cursed_ruby":1,"skel_bone":40,"hand_of_god":450, "profit": 483999},
@@ -103,6 +103,32 @@ var recipes = {
         "ice_powder": 2,
         "ice_cube": 700,
         "fang_of_gram": 3,
+    },
+    "white_winged_boots": {
+        "lava_gem": 20,
+        "harpys_feather": 75,
+        "fiery_ember": 3,
+        "burning_hair": 700,
+        "oridecon": 30,
+    },
+    "robe_of_judgment": {
+        "harpys_feather": 75,
+        "fiery_ember": 3,
+        "burning_hair": 700,
+        "oridecon": 30,
+    },
+    "imperial_armor": {
+        "lava_gem": 20,
+        "harpys_feather": 75,
+        "shining_holy_water": 3,
+        "burning_heart": 700,
+        "oridecon": 30,
+    },
+    "boots_of_judgment": {
+        "harpys_feather": 75,
+        "burning_heart": 700,
+        "oridecon": 30,
+        "shining_holy_water": 3,
     },
   };
 

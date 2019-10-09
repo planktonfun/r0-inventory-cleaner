@@ -350,3 +350,14 @@ wrapping_lace
 zargon
 zircon
 elunium
+white_winged_boots
+robe_of_judgment
+imperial_armor
+boots_of_judgment
+lava_gem
+harpys_feather
+fiery_ember
+burning_heart
+burning_hair
+oridecon
+shining_holy_water
