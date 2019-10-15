@@ -1,6 +1,6 @@
 var prices = {
   "abyss_flower": {
-    "price": 452,
+    "price": 383,
     "snapping": -1
   },
   "alloy_mail": {
@@ -8,11 +8,11 @@ var prices = {
     "snapping": -1
   },
   "amethyst": {
-    "price": 23897,
+    "price": 27952,
     "snapping": -1
   },
   "antenna": {
-    "price": 199489,
+    "price": 176591,
     "snapping": -1
   },
   "aquamarine": {
@@ -32,7 +32,7 @@ var prices = {
     "snapping": -1
   },
   "bell": {
-    "price": 147836,
+    "price": 120179,
     "snapping": -1
   },
   "berdysz_1s": {
@@ -44,7 +44,7 @@ var prices = {
     "snapping": -1
   },
   "biotite": {
-    "price": 130688,
+    "price": 118806,
     "snapping": -1
   },
   "black_magic_ore": {
@@ -56,7 +56,7 @@ var prices = {
     "snapping": -1
   },
   "bloody_rune": {
-    "price": 43496,
+    "price": 43809,
     "snapping": -1
   },
   "blood_axe_1s": {
@@ -72,11 +72,11 @@ var prices = {
     "snapping": -1
   },
   "box_wrapper": {
-    "price": 323,
+    "price": 268,
     "snapping": -1
   },
   "brigan": {
-    "price": 640,
+    "price": 545,
     "snapping": -1
   },
   "broken_blade": {
@@ -124,7 +124,7 @@ var prices = {
     "snapping": -1
   },
   "coal": {
-    "price": 1433,
+    "price": 1467,
     "snapping": -1
   },
   "coat_of_dragon_scale": {
@@ -137,18 +137,18 @@ var prices = {
   },
   "cross_bow_1s": {
     "price": 24790,
-    "snapping": -1
+    "snapping": 2279
   },
   "crystal_bone": {
-    "price": 629,
+    "price": 509,
     "snapping": -1
   },
   "crystal_mirror": {
-    "price": 83438,
+    "price": 77244,
     "snapping": -1
   },
   "cursed_ruby": {
-    "price": 98615,
+    "price": 94877,
     "snapping": -1
   },
   "cutlus_1s": {
@@ -156,7 +156,7 @@ var prices = {
     "snapping": -1
   },
   "cyfar": {
-    "price": 856,
+    "price": 763,
     "snapping": -1
   },
   "dead_branch": {
@@ -184,11 +184,11 @@ var prices = {
     "snapping": -1
   },
   "evil_horn": {
-    "price": 333,
+    "price": 302,
     "snapping": -1
   },
   "fabric": {
-    "price": 162023,
+    "price": 135355,
     "snapping": -1
   },
   "falken_blitz_1s": {
@@ -204,7 +204,7 @@ var prices = {
     "snapping": -1
   },
   "feather": {
-    "price": 125,
+    "price": 152,
     "snapping": -1
   },
   "feather_mace_1s": {
@@ -212,7 +212,7 @@ var prices = {
     "snapping": -1
   },
   "fiery_ember": {
-    "price": 165568,
+    "price": 152116,
     "snapping": -1
   },
   "floral_bracelet": {
@@ -228,7 +228,7 @@ var prices = {
     "snapping": -1
   },
   "frozen_heart": {
-    "price": 564,
+    "price": 481,
     "snapping": -1
   },
   "fullblack_dagger_1s": {
@@ -244,11 +244,11 @@ var prices = {
     "snapping": -1
   },
   "glass_bead": {
-    "price": 287,
+    "price": 246,
     "snapping": -1
   },
   "glitter_shell": {
-    "price": 535,
+    "price": 687,
     "snapping": -1
   },
   "goibnes_spaulders": {
@@ -276,11 +276,11 @@ var prices = {
     "snapping": 0
   },
   "hand_of_god": {
-    "price": 612,
+    "price": 511,
     "snapping": -1
   },
   "hard_skin": {
-    "price": 383,
+    "price": 390,
     "snapping": -1
   },
   "harpys_feather": {
@@ -292,7 +292,7 @@ var prices = {
     "snapping": -1
   },
   "heroic_emblem": {
-    "price": 42976,
+    "price": 44605,
     "snapping": -1
   },
   "high_heels": {
@@ -304,11 +304,11 @@ var prices = {
     "snapping": -1
   },
   "ice_powder": {
-    "price": 180598,
+    "price": 178692,
     "snapping": -1
   },
   "immortal_heart": {
-    "price": 339,
+    "price": 328,
     "snapping": -1
   },
   "imperial_armor": {
@@ -316,7 +316,7 @@ var prices = {
     "snapping": -1
   },
   "iron": {
-    "price": 958,
+    "price": 1645,
     "snapping": -1
   },
   "ivory_knife_1s": {
@@ -332,7 +332,7 @@ var prices = {
     "snapping": -1
   },
   "key_of_clock_tower": {
-    "price": 285282,
+    "price": 262995,
     "snapping": -1
   },
   "knuckle_dusters_1s": {
@@ -344,11 +344,11 @@ var prices = {
     "snapping": -1
   },
   "lava_gem": {
-    "price": 25727,
+    "price": 25113,
     "snapping": -1
   },
   "lemegeton_tear": {
-    "price": 0,
+    "price": 23786,
     "snapping": -1
   },
   "lords_clothes": {
@@ -372,7 +372,7 @@ var prices = {
     "snapping": -1
   },
   "memento": {
-    "price": 198,
+    "price": 362,
     "snapping": -1
   },
   "memory_book": {
@@ -380,11 +380,11 @@ var prices = {
     "snapping": -1
   },
   "memory_gem": {
-    "price": 2872,
+    "price": 3186,
     "snapping": -1
   },
   "mercury": {
-    "price": 2173,
+    "price": 2467,
     "snapping": -1
   },
   "mink_coat": {
@@ -408,11 +408,11 @@ var prices = {
     "snapping": -1
   },
   "mystery_bow_1s": {
-    "price": 844842,
-    "snapping": 4174
+    "price": 838364,
+    "snapping": 5000
   },
   "necklace_of_oblivion": {
-    "price": 817,
+    "price": 742,
     "snapping": -1
   },
   "necklace_of_wisdom": {
@@ -436,7 +436,7 @@ var prices = {
     "snapping": -1
   },
   "orc_claw": {
-    "price": 82446,
+    "price": 80475,
     "snapping": -1
   },
   "oridecon": {
@@ -444,7 +444,7 @@ var prices = {
     "snapping": -1
   },
   "pearl": {
-    "price": 75843,
+    "price": 72887,
     "snapping": -1
   },
   "piercing_staff_1s": {
@@ -468,7 +468,7 @@ var prices = {
     "snapping": -1
   },
   "rapid_atk_alloy": {
-    "price": 38046,
+    "price": 37884,
     "snapping": -1
   },
   "release_of_wish_1s": {
@@ -492,11 +492,11 @@ var prices = {
     "snapping": 1960
   },
   "rose_quartz": {
-    "price": 82525,
+    "price": 71163,
     "snapping": -1
   },
   "rotten_bandage": {
-    "price": 194,
+    "price": 205,
     "snapping": -1
   },
   "round_buckleer": {
@@ -536,11 +536,11 @@ var prices = {
     "snapping": -1
   },
   "scell": {
-    "price": 193,
+    "price": 199,
     "snapping": -1
   },
   "shining_holy_water": {
-    "price": 740599,
+    "price": 767895,
     "snapping": -1
   },
   "shoes": {
@@ -548,7 +548,7 @@ var prices = {
     "snapping": 4234
   },
   "skel_bone": {
-    "price": 1018,
+    "price": 1583,
     "snapping": -1
   },
   "skull_bracer": {
@@ -560,15 +560,15 @@ var prices = {
     "snapping": -1
   },
   "slow_atk_alloy": {
-    "price": 12682,
+    "price": 12628,
     "snapping": -1
   },
   "sniping_suit": {
-    "price": 2222812,
-    "snapping": -1
+    "price": 1288054,
+    "snapping": 4761
   },
   "soft_feather": {
-    "price": 93262,
+    "price": 91404,
     "snapping": -1
   },
   "soldier_boots": {
@@ -580,7 +580,7 @@ var prices = {
     "snapping": 4261
   },
   "star_crumb": {
-    "price": 149572,
+    "price": 133627,
     "snapping": -1
   },
   "statue_of_guardian_angel": {
@@ -596,11 +596,11 @@ var prices = {
     "snapping": 0
   },
   "steel": {
-    "price": 2690,
+    "price": 2678,
     "snapping": -1
   },
   "sticky_mucus": {
-    "price": 142,
+    "price": 148,
     "snapping": -1
   },
   "strong_shield": {
@@ -624,19 +624,19 @@ var prices = {
     "snapping": -1
   },
   "temporal_crystal": {
-    "price": 602,
+    "price": 512,
     "snapping": -1
   },
   "tights": {
-    "price": 1967914,
-    "snapping": 2782
+    "price": 2731372,
+    "snapping": 3958
   },
   "time_twister": {
-    "price": 472319,
+    "price": 507288,
     "snapping": -1
   },
   "topaz": {
-    "price": 2647,
+    "price": 2578,
     "snapping": -1
   },
   "waghnak_1s": {
@@ -660,15 +660,15 @@ var prices = {
     "snapping": -1
   },
   "wrapping_lace": {
-    "price": 72235,
+    "price": 71480,
     "snapping": -1
   },
   "zargon": {
-    "price": 370,
+    "price": 351,
     "snapping": -1
   },
   "zircon": {
-    "price": 14047,
-    "snapping": 3511
+    "price": 15835,
+    "snapping": 3527
   }
 };
